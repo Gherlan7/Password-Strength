@@ -1,6 +1,7 @@
 var pass = document.getElementById("password");
 var msg = document.getElementById("message");
 var strength = document.getElementById("strength");
+var eyeicon = document.getElementById("eyeicon");
 
 pass.addEventListener("input", () => {
   if (pass.value.length > 0) {
@@ -22,3 +23,12 @@ pass.addEventListener("input", () => {
     msg.style.color = "green";
   }
 });
+eyeicon.onclick = function () {
+  if (pass.type == "password") {
+    pass.type = "text";
+    eyeicon.src = "eye-icons/eye-open.png";
+  } else {
+    pass.type = "password";
+    eyeicon.src = "eye-icons/eye-close.png";
+  }
+};
