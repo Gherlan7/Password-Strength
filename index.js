@@ -9,6 +9,7 @@ pass.addEventListener("input", () => {
   } else {
     msg.style.display = "none";
   }
+  //Implementing the algorithm for the password strength
   if (pass.value.length < 4) {
     strength.innerHTML = "weak";
     pass.style.borderColor = "#ff5925";
@@ -23,6 +24,7 @@ pass.addEventListener("input", () => {
     msg.style.color = "green";
   }
 });
+//Implementing the toggle of the eye icons, interchanging them
 eyeicon.onclick = function () {
   if (pass.type == "password") {
     pass.type = "text";
